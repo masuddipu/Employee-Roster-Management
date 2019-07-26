@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Employee Register</title>
+  </head>
+  <body>
+    Sign up as a {{ user_type }}:
+    <form enctype="multipart/form-data" method="POST">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Register">
+    </form>
+  </body>
+</html>

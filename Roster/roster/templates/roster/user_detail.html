@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load  %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>User Type</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>User details:</h1>
+        <p>Username: {{ object.username }}</p>
+        <p>Phone: {{ object.phone }}</p>
+        <p>Address: {{ object.location }}</p>
+        <p>Photo: </p>
+          <img src="{{ object.profile_pic.url }}" alt="{{ object.username }}" height="300">
+
+      </div>
+    </div>
+  </body>
+</html>

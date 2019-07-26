@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>User Type</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Employee List:</h1>
+        <table>
+          <th>
+            <td>Username:</td>
+            <td>Profile</td>
+            <td>Update</td>
+          </th>
+          {% for client in client_list %}
+            <tr>
+              <td>{{ client.username }}</td>
+              <td><a class="btn btn-primary" href="{% url 'roster:u_detail' pk=client.pk %}">View Profile</a></td>
+              <td><a class="btn btn-warning" href="{% url 'accounts:update' pk=client.pk %}">Update</a></td>
+            </tr>
+          {% endfor %}
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
